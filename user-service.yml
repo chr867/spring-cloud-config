@@ -1,0 +1,20 @@
+token:
+  expiration_time: 864000000
+  secret: '{cipher}AQBaYPL2wR4rc516WJCgv1+rqjDK68pc55KGFpLJezm7sjxG0ElLXjUXHfbWb8tMueZinV6rztM4s6oI1q/7xw+5M1V9zqMrToJWVzNTkH7Bb+mrg7lJ1bg6PsVbEDwPlrSC5QRJCZEJ72TZc5fs/fH6Z08pazeJEWVxfv/TqQH1JXEbeMH1Ba7IU9PaezormbAxxeWObG3fj+W2/qRQ0m9dhl3wBKTauOoFomFuhV6jgDCTmn79FBagMuqoZnmbFKFq6Ng3hDbFdNEzfiCgYJc4BeFwiHCvwBQbhB/ZmD6a3bwAYyi/llpQ6S2QI0DU85AlKA6xmudUidCbmnrx4Uxig8dFzavcn3VxRdeSyThh6Ce5qkgO3sPtkVvdBa0Iwt7qtfAH9ZKYfbpe6ZHCkiH4'
+
+gateway:
+  ip: 172.18.0.5
+
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MYSQL
+    username: sa
+    password: '{cipher}AQAJ1UY/MVbgqa2xxk1e1GKTVSYKsJ0hQFWYQSbIbcViLAwlr57a2rJ4gGvgGBMRtkkgFFmOV6pKdv//uXbCEGzooX4GJgdqQ+fSM8Dac4loLGuheHEpQj0K/C6MNh34sZVw9r5VTaHEP/GOKDPMcIBMmiBLu0fyVc5HxDylbR9nnKQjrGVclRgOFMITnZSpmu93mdqi1CJcMt/YFnM7QGk8EBUxubPgPMulgWo2crPUn3ax6fRCkeMtMpXDvMaKwNbbIUnaXM+d79OQtaIlviOUaJ4EI/RRD/yPDcT8zg7d+hX+TP5VdBW5ErYTT2dOJ2rrQXsbNy05JLGOVYDT83VsneQYGkFugJjKZ8ZDsFXzvSMjIKPONzhl4o7lW/zgoSQ='
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  # Microservice name(Eureka Server Registerd)
+  exception:
+    orders_is_empty: User's order is empty.
